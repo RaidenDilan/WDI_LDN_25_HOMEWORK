@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html ng-app="wonderApp">
+  <head>
+    <base href="/">
+    <meta charset="utf-8">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/5.0.0/normalize.min.css">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+    <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBNzl71TnY0eNczTFCDoQupoQTLsMdzTmY"></script>
+    <title>Angular Stack Setup</title>
+    <!-- inject:js -->
+    <!-- endinject -->
+    <!-- inject:css -->
+    <!-- endinject -->
+  </head>
+  <body ng-controller="WondersCtrl as wonders" class="site">
+    <header>
+      <h1>Wonders of the World!</h1>
+      <hr>
+    </header>
+      <nav>
+        <a ui-sref-active="active" ui-sref="home">Home</a>
+      </nav>
+    <main ui-view></main>
+    <footer>
+      <p>Made with <span class="heart">♥︎</span> at General Assembly</p>
+    </footer>
+  </body>
+</html>

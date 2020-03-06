@@ -1,0 +1,161 @@
+// Import all of your scss files here
+@import "bootstrap/bootstrap-grid";
+
+.heading-styles {
+  text-transform: uppercase;
+  letter-spacing: 1px;
+}
+
+$white: #FFF;
+$black: #000;
+
+body {
+  font-family: "Raleway", "HelveticaNeue", "Helvetica Neue", Helvetica, Arial, sans-serif;
+}
+
+* {
+  font-family: inherit;
+}
+
+h1 {
+  text-align: center;
+}
+
+nav {
+  text-align: center;
+  background-color: black;
+  opacity: 0.3;
+  transition: opacity 0.6s ease;
+  padding-top: 6px;
+  padding-bottom: 6px;
+  @extend .heading-styles;
+  a {
+    font-size: 25px;
+    font-weight: bold;
+    color: $white;
+    &:hover {
+      color: red;
+      text-decoration: none;
+    }
+  }
+}
+
+section {
+  div {
+    ul {
+      li {
+        a {
+          font-size: 20px;
+          color: black;
+          &:hover {
+            text-decoration: none;
+            color: red;
+          }
+        }
+        p {
+          margin-top: 10px;
+        }
+      }
+    }
+    img {
+      margin-top: 100px;
+      max-width: 100%;
+    }
+  }
+}
+
+section {
+  text-align: center;
+  padding-top: 20px;
+  padding-bottom: 20px;
+  position: relative;
+  border-bottom: 2px solid dodgerblue;
+  &:last-of-type {
+    border-bottom: 0;
+  }
+}
+
+p {
+  strong {
+    color: dodgerblue;
+    @extend .heading-styles;
+  }
+}
+
+section {
+  div {
+    ul {
+      li {
+        img {
+          max-width: 70%;
+          margin-top: 100px;
+          border: 2px solid $black;
+        }
+      }
+    }
+  }
+}
+
+li {
+  list-style: none;
+}
+
+ul {
+  padding-left: 0;
+  margin-bottom: 0;
+}
+
+footer {
+  padding-top: 5px;
+  padding-bottom: 5px;
+  text-align: center;
+  background-color: black;
+  opacity: 0.3;
+  transition: opacity 0.6s ease;
+  color: $white;
+    .heart {
+    color:#cf2e31;
+  }
+}
+
+.info {
+  color: white;
+}
+
+.google-map {
+  height: 400px;
+  width: 1050px;
+  display: inline-block;
+}
+
+.map {
+  // border: 2px solid black;
+  background-color: black;
+  padding-bottom: 20px;
+}
+
+.site {
+  display: flex;
+  min-height: 100vh;
+  flex-direction: column;
+}
+
+.site-content {
+  flex: 1;
+}
+
+.wonder {
+  margin: 20px;
+  margin-left: 0;
+  margin-right: 0;
+  border: 2px solid black;
+  background-color: black;
+  color: white;
+  border-bottom: 1px solid white;
+}
+
+.image {
+  // padding: 10px;
+  border: 2px solid black;
+  background-color: $black;
+}

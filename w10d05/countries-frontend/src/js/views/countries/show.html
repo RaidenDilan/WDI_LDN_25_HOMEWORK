@@ -1,0 +1,16 @@
+<div class="container">
+  <hr>
+</div>
+<div class="container">
+    <!-- <p><strong>Image: </strong></p> -->
+    <h1>{{ countriesShow.country.name }}</h1>
+    <img src="{{ countriesShow.country.image }}" alt="{{ countriesShow.country.name }}" width="200">
+    <p><strong>Area: </strong>{{ countriesShow.country.size }} km²</p>
+    <p><strong>Population: </strong>{{ countriesShow.country.population }} million</p>
+    <p><strong>Language: </strong>{{ countriesShow.country.language }}</p>
+    <p><strong>Currency: </strong>{{ countriesShow.country.currency }}</p>
+    <p><strong>Created at: </strong>{{ countriesShow.country.created_at }}</p>
+    <p><strong>Updated at: </strong>{{ countriesShow.country.updated_at }}</p>
+    <button ui-sref="countriesEdit({ id: countriesShow.country.id })">Edit</button>
+    <button ng-click="countriesShow.delete()" class="red">Delete</button>
+</div>

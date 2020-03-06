@@ -1,0 +1,626 @@
+@import 'vendor/reset';
+@import 'errors';
+@import 'bootstrap/bootstrap-grid';
+// @import 'angular-ui-gird';
+
+$burger: #FF0000;
+$button: rgb(0, 207, 114);
+//------------------------------------------------------------------------------
+$black: #000000;
+$white: #FDFEFE;
+$pale-green: #00FFB3;
+//------------------------------------------------------------------------------
+$medium-pink: #4DD0E1;
+$dark-pink: #85C1E9;
+//------------------------------------------------------------------------------
+$blue: #63E9FB;
+$soft-blue: #00E0FF;
+$medium-blue: #1BC6DE;
+$dark-blue: #24C1D6;
+$darker-blue: #2CB2C4;
+$darkest-blue: #00CBE6;
+$ultimate-blue: #A6E8F1;
+$ultimatum-blue: #9FEEF9;
+$super-blue: #68DCEC;
+$mega-blue: #0091A3;
+//------------------------------------------------------------------------------
+$login: rgb(135, 232, 82);
+$register: rgb(73, 173, 200);
+$index: rgba(#FFA800, 0.76);
+$show: rgba(255, 0, 0, 0.48);
+$edit: rgba(38, 223, 0, 0.6);
+$new: rgb(3, 100, 201);
+$home: rgba(0, 255, 79, 0.8);
+
+//------------------------------------------------------------------------------
+* {
+  box-sizing: border-box;
+}
+//------------------------------------------------------------------------------
+.gridStyle {
+    border: 1px solid rgb(212,212,212);
+    width: 400px;
+    height: 300px
+}
+
+.centered-styles {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.image-styles {
+  position: absolute;
+  top: 12%;
+  left: 0;
+  text-align: center;
+}
+
+//------------------------------------------------------------------------------
+.form-styles {
+  width: 100%;
+  font-size: 14px;
+  padding: 8px 10px;
+  border: 0;
+  border-radius: 4px;
+  box-shadow: none;
+  background-color: $white;
+  &:focus {
+    outline: none !important;
+  }
+}
+//------------------------------------------------------------------------------
+body, button, input, textarea {
+  font-family: 'Raleway', serif;
+}
+//------------------------------------------------------------------------------
+body {
+  overflow-x: hidden;
+  &.home {
+    background-color: $home;
+    // animation: pulse-1 10s infinite;
+  }
+  &.studentsIndex {
+    background-color: $index;
+    // animation: pulse-1 10s infinite;
+  }
+  &.studentsShow {
+    background-color: $show;
+  }
+  &.studentsNew {
+    background-color: $new;
+    // animation: pulse-2 10s infinite;
+  }
+  &.studentsEdit {
+    background-color: $edit;
+    // animation: pulse-1 10s infinite;
+  }
+  &.login {
+    background-color: $login;
+    // animation: pulse-1 10s infinite;
+  }
+  &.register {
+    background-color: $register;
+    // animation: pulse-1 10s infinite;
+  }
+}
+//------------------------------------------------------------------------------
+body {
+  background-color: rgb(204, 204, 204);
+}
+//------------------------------------------------------------------------------
+h1 {
+  color: $white;
+  font-size: 36px;
+}
+//------------------------------------------------------------------------------
+p {
+  color: $white;
+  line-height: 1.2;
+}
+//------------------------------------------------------------------------------
+a {
+  color: $white;
+  text-decoration: none;
+}
+//------------------------------------------------------------------------------
+.menu {
+  // animation: clipMe 5s;
+  position: fixed;
+  top: 20px;
+  right: 20px;
+  width: 50px;
+  height: 50px;
+  background-color: $white;
+  border-radius: 50%;
+  cursor: pointer;
+  z-index: 3;
+  box-shadow: 0px 3px rgba(0, 0, 0, 0.15);
+  .burger {
+    width: 20px;
+    height: 15px;
+    @extend .centered-styles;
+    span {
+      display: block;
+      position: absolute;
+      height: 3px;
+      width: 100%;
+      background-color: $burger;
+      border-radius: 3px;
+      opacity: 1;
+      left: 0;
+      transform: rotate(0deg);
+      transition: all 0.15s ease-in-out;
+      &:nth-child(1) {
+        top: 0px;
+      }
+      &:nth-child(2),
+      &:nth-child(3) {
+        top: 6px;
+      }
+      &:nth-child(4) {
+        top: 12px;
+      }
+    }
+  }
+  &.open {
+    .burger {
+      span {
+        background-color: $burger;
+        &:nth-child(1),
+        &:nth-child(4) {
+          top: 6px;
+          width: 0%;
+          left: 50%;
+        }
+        &:nth-child(2) {
+          transform: rotate(405deg);
+        }
+        &:nth-child(3) {
+          transform: rotate(-405deg);
+        }
+      }
+    }
+  }
+}
+//------------------------------------------------------------------------------
+nav {
+  > div {
+    z-index: 2;
+    width: 50%;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    transition: all 0.8s ease-in-out;
+    text-align: center;
+    &.left {
+      background-color: $soft-blue;
+      left: -50%;
+      h1 {
+        @extend .centered-styles;
+        color: $white;
+        font-size: 36px;
+        text-transform: uppercase;
+        // display: block;
+        color: rgba(0, 0, 0, 0.5);
+        &:hover {
+          // animation: bounce 0.55s infinite;
+        }
+      }
+    }
+    &.right {
+      background-color: $soft-blue;
+      right: -50%;
+    }
+    .links {
+      @extend .centered-styles;
+      ul {
+        li {
+          line-height: 1.5;
+          a {
+            font-size: 24px;
+            color: $white;
+            display: block;
+            text-transform: uppercase;
+            &:hover {
+              color: rgba(0, 0, 0, 0.5);
+              animation: bounce 0.55s infinite;
+            }
+            &.active {
+              color: $white;
+              opacity: 0.5;
+              text-decoration: line-through;
+              animation: none;
+            }
+          }
+        }
+      }
+    }
+  }
+  &.open {
+    > div {
+      &.left {
+        left: 0;
+        animation: pulse-1 20s infinite;
+      }
+      &.right {
+        right: 0;
+        animation: pulse-2 20s infinite;
+      }
+    }
+  }
+}
+//------------------------------------------------------------------------------
+section {
+  min-height: 100vh;
+  .student {
+    @extend .image-styles;
+    ul {
+      li {
+        img {
+          max-width: 80%;
+        }
+        a {
+          h3 {
+            text-align: center;
+            padding-top: 20px;
+            padding-bottom: 20px
+          }
+        }
+      }
+    }
+  }
+  .content {
+    @extend .centered-styles;
+    text-align: center;
+    max-width: 600px;
+    padding: 20px;
+    h1 {
+      margin-bottom: 30px;
+      text-transform: uppercase;
+      font-size: 50px;
+      animation: floating 0.75s infinite;
+    }
+    form {
+      input, textarea {
+        @extend .form-styles;
+        margin-bottom: 10px;
+        background-color: $white;
+        margin-top: 5px;
+        &:focus {
+          outline: none !important;
+          box-shadow: 0px 3px rgba(0, 0, 0, 0.15);
+        }
+      }
+      textarea {
+        height: 150px;
+        resize: none;
+      }
+      button {
+        @extend .form-styles;
+        color: $button;
+        box-shadow: 0px 3px rgba(0, 0, 0, 0.15);
+        cursor: pointer;
+        animation: slideUp 2s;
+        text-transform: uppercase;
+        font-weight: 500;
+        &:hover {
+          // animation: pulse 1s;
+        }
+      }
+    }
+    div {
+      p {
+        color: $black;
+        animation: expandOpen 1s;
+      }
+    }
+    img {
+      background-color: none;
+      max-width: 60%;
+    }
+    h2 {
+      padding-bottom: 40px;
+      color: $white;
+      text-transform: uppercase;
+    }
+  }
+  h2 {
+    font-size: 40px;
+    padding-bottom: 10px;
+    animation: floating 2s infinite;
+  }
+  p {
+    color: $black;
+    a {
+      color: rgb(255, 245, 6);
+    }
+    em {
+      color: $white;
+    }
+  }
+  button {
+    margin-top: 10px;
+    @extend .form-styles;
+    color: $button;
+    box-shadow: 0px 3px rgba(0, 0, 0, 0.15);
+    cursor: pointer;
+    animation: slideUp 1.5s;
+    text-transform: uppercase;
+    font-weight: 500;
+    &:hover {
+      // animation: bounce 1s;
+    }
+  }
+  ul {
+    li {
+      a {
+        h3 {
+          color: $black;
+          font-size: 30px;
+          // animation: bounceIn 2s;
+        }
+      }
+      p {
+        color: $black;
+      }
+    }
+  }
+}
+//------------------------------------------------------------------------------
+// footer {
+//   .site {
+//     display: flex;
+//     min-height: 100vh;
+//     flex-direction: column;
+//   }
+//   .site-content {
+//     flex: 1;
+//   }
+//   padding-top: 5px;
+//   padding-bottom: 5px;
+//   text-align: center;
+//   background-color: black;
+//   opacity: 0.5;
+//   transition: opacity 0.6s ease;
+//   color: $white;
+//     .heart {
+//     color:#cf2e31;
+//   }
+// }
+//------------------------------------------------------------------------------
+@keyframes bounce {
+  0% {
+    transform: translateY(0);
+  }
+  25% {
+    transform: translateY(-2px);
+  }
+  50% {
+    transform: translateY(1px);
+  }
+  75% {
+    transform: translateY(-1px);
+  }
+  100% {
+    transform: translateY(0);
+  }
+}
+//------------------------------------------------------------------------------
+@keyframes pulse {
+  0% {
+    transform: scale(1);
+  }
+  25% {
+    transform: scale(1.015)
+  }
+  50% {
+    transform: scale(1);
+  }
+  75% {
+    transform: scale(1.015);
+  }
+  100% {
+    transform: scale(1);
+  }
+}
+//------------------------------------------------------------------------------
+@keyframes bounceIn {
+  0% {
+    transform: scale(0.1);
+    opacity: 0;
+  }
+  60% {
+    transform: scale(1.2);
+    opacity: 1;
+  }
+  100% {
+    transform: scale(1);
+  }
+}
+//------------------------------------------------------------------------------
+@keyframes pulse-1 {
+  0% {
+    background-color: $super-blue;
+  }
+  10% {
+    background-color: $blue;
+  }
+  20% {
+    background-color: $soft-blue;
+  }
+  30% {
+    background-color: $medium-blue;
+  }
+  40% {
+    background-color: $dark-blue;
+  }
+  50% {
+    background-color: $darker-blue;
+  }
+  60% {
+    background-color: $darkest-blue;
+  }
+  70% {
+    background-color: $ultimate-blue;
+  }
+  80% {
+    background-color: $ultimatum-blue;
+  }
+  90% {
+    background-color: $super-blue;
+  }
+  100% {
+    background-color: $mega-blue;
+  }
+}
+//------------------------------------------------------------------------------
+@keyframes pulse-2 {
+  0% {
+    background-color: $mega-blue;
+  }
+  10% {
+    background-color: $super-blue;
+  }
+  20% {
+    background-color: $ultimatum-blue;
+  }
+  30% {
+    background-color: $ultimate-blue;
+  }
+  40% {
+    background-color: $darkest-blue;
+  }
+  50% {
+    background-color: $darker-blue;
+  }
+  60% {
+    background-color: $dark-blue;
+  }
+  70% {
+    background-color: $medium-blue;
+  }
+  80% {
+    background-color: $soft-blue;
+  }
+  90% {
+    background-color: $blue;
+  }
+  100% {
+    background-color: $super-blue;
+  }
+}
+//------------------------------------------------------------------------------
+@keyframes slideDown {
+	0% {
+		transform: translateY(-100%);
+	}
+	50%{
+		transform: translateY(8%);
+	}
+	65%{
+		transform: translateY(-4%);
+	}
+	80%{
+		transform: translateY(4%);
+	}
+	95%{
+		transform: translateY(-2%);
+	}
+	100% {
+		transform: translateY(0%);
+	}
+}
+//------------------------------------------------------------------------------
+@keyframes slideUp {
+	0% {
+		transform: translateY(100%);
+	}
+	50%{
+		transform: translateY(-8%);
+	}
+	65%{
+		transform: translateY(20%);
+	}
+	80%{
+		transform: translateY(-10%);
+	}
+	95%{
+		transform: translateY(6%);
+	}
+	100% {
+		transform: translateY(0%);
+	}
+}
+//------------------------------------------------------------------------------
+@keyframes floating {
+	0% {
+		transform: translateY(0%);
+	}
+	50% {
+		transform: translateY(15%);
+	}
+	100% {
+		transform: translateY(0%);
+	}
+}
+//------------------------------------------------------------------------------
+@keyframes expandOpen {
+	0% {
+		transform: scale(1.8);
+	}
+	50% {
+		transform: scale(0.95);
+	}
+	80% {
+		transform: scale(1.05);
+	}
+	90% {
+		transform: scale(0.98);
+	}
+	100% {
+		transform: scale(1);
+	}
+}
+//------------------------------------------------------------------------------
+@keyframes bigEntrance {
+	0% {
+		transform: scale(0.3) rotate(6deg) translateX(-30%) translateY(30%);
+		opacity: 0.2;
+	}
+	30% {
+		transform: scale(1.03) rotate(-2deg) translateX(2%) translateY(-2%);
+		opacity: 1;
+	}
+	45% {
+		transform: scale(0.98) rotate(1deg) translateX(0%) translateY(0%);
+		opacity: 1;
+	}
+	60% {
+		transform: scale(1.01) rotate(-1deg) translateX(0%) translateY(0%);
+		opacity: 1;
+	}
+	75% {
+		transform: scale(0.99) rotate(1deg) translateX(0%) translateY(0%);
+		opacity: 1;
+	}
+	90% {
+		transform: scale(1.01) rotate(0deg) translateX(0%) translateY(0%);
+		opacity: 1;
+	}
+	100% {
+		transform: scale(1) rotate(0deg) translateX(0%) translateY(0%);
+		opacity: 1;
+	}
+}
+//------------------------------------------------------------------------------
+@keyframes spinning {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+//------------------------------------------------------------------------------

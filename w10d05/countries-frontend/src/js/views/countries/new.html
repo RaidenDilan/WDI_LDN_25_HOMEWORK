@@ -1,0 +1,40 @@
+<!-- {{ countriesNew.country }} -->
+<!-- {{ countriesNew.continents }} -->
+<div class="container">
+  <hr>
+  <h1>New</h1>
+  <form ng-submit="countriesNew.submit()" class="form-group">
+    <div>
+      <label>Name</label>
+      <input ng-model="countriesNew.country.name" class="form-control">
+    </div>
+    <div>
+      <label>Image</label>
+      <input ng-model="countriesEdit.country.image" class="form-control">
+    </div>
+    <div>
+      <label>Size</label>
+      <input ng-model="countriesEdit.country.size" class="form-control">
+    </div>
+    <div>
+      <label>Population</label>
+      <input ng-model="countriesEdit.country.population" class="form-control">
+    </div>
+    <div>
+      <label>Language</label>
+      <input ng-model="countriesEdit.country.language" class="form-control">
+    </div>
+    <div>
+      <label>Currency</label>
+      <input ng-model="countriesEdit.country.currency" class="form-control">
+    </div>
+    <div>
+      <label>Continents</label><br>
+      <select ng-model="countriesNew.country.continent_id">
+        <option disabled selected value="">Please select a continent</option>
+        <option ng-repeat="continent in countriesNew.continents" ng-value="{{ continent.id }}">{{ continent.name }}</option>
+      </select>
+    </div>
+    <button>Create</button>
+  </form>
+</div>

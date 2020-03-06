@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <% include ./partials/metas %>
+    <title>RESTful App With Referenced Models</title>
+      <% include ./partials/scripts %>
+  </head>
+  <body>
+    <% include ./partials/navbar %>
+    <% for(const type in messages) { %>
+      <div class="<%= type %>">
+        <h5><%= messages[type] %></h5>
+      </div>
+    <% } %>
+    <main>
+      <%- body %>
+    </main>
+    <% include ./partials/spreadsheets %>
+    <footer>
+      <p>Raiden Dilan &copy; General Assembly 2017</p>
+    </footer>
+  </body>
+</html>

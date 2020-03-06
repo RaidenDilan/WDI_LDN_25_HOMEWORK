@@ -1,0 +1,328 @@
+@import "bootstrap/bootstrap-grid";
+
+.heading-styles {
+  text-transform: uppercase;
+  letter-spacing: 1px;
+}
+
+$white: #FFF;
+$black: #000;
+
+body {
+  font-family: "Raleway", "HelveticaNeue", "Helvetica Neue", Helvetica, Arial, sans-serif;
+}
+
+* {
+  font-family: inherit;
+}
+
+a {
+  color: black;
+  text-decoration: none;
+}
+
+h1, h3, h4 {
+  @extend .heading-styles;
+  margin-bottom: 0;
+  text-align: center;
+}
+
+h2, {
+  text-align: center;
+}
+
+header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 2;
+  height: 40px;
+  background-color: rgba(20, 20, 20, 0);
+  transition: background-color 0.2s ease;
+  &.opaque {
+    background-color: rgba(20, 20, 20, 0.6);
+  }
+  nav {
+    ul {
+      list-style: none;
+      padding: 0;
+      margin: 0;
+      li {
+        display: inline-block;
+        float: right;
+        margin-left: 20px;
+        line-height: 40px;
+        &:last-of-type {
+          margin-left: 0;
+        }
+        &.menu {
+          color: $black;
+          cursor: pointer;
+          display: none;
+          font-size: 20px;
+        }
+        a {
+          color: black;
+          @extend .heading-styles;
+          font-weight: bold;
+          position: relative;
+          &:after {
+            content: "";
+            height: 2px;
+            width: 100%;
+            background-color: $black;
+            position: absolute;
+            bottom: -4px;
+            left: 0;
+            opacity: 0;
+            transition: opacity 1.2s ease;
+          }
+          &:hover {
+            text-decoration: none;
+            color: black;
+            &:after {
+              opacity: 1;
+            }
+          }
+        }
+      }
+    }
+  }
+}
+
+section {
+  text-align: center;
+  padding-top: 80px;
+  padding-bottom: 80px;
+  position: relative;
+  border-bottom: 2px solid $black;
+  &:last-of-type {
+    border-bottom: 0;
+  }
+  h2 {
+    font-size: 28px;
+  }
+}
+
+p {
+  text-align: center;
+  margin-top: 10px;
+  a {
+    color: black;
+    @extend .heading-styles;
+    font-weight: bold;
+    position: relative;
+    text-decoration: none;
+    &:after {
+      content: "";
+      height: 2px;
+      width: 100%;
+      background-color: $black;
+      position: absolute;
+      bottom: -4px;
+      left: 0;
+      opacity: 0;
+      transition: opacity 0.2s ease;
+      text-decoration: none;
+    }
+    &:hover {
+      text-decoration: none;
+      color: black;
+      &:after {
+        opacity: 1;
+      }
+    }
+  }
+}
+
+.show {
+  border: 2px solid black;
+}
+
+.alert {
+  margin-top: 39px;
+  margin-bottom: 0;
+  position: relative;
+  background-color: lightgrey;
+  padding: 10px;
+}
+
+.registration {
+  padding-bottom: 187px;
+}
+
+.login {
+  padding-bottom: 327px;
+  font-weight: bold;
+}
+
+.clubs {
+  padding-top: 118px;
+}
+
+.create {
+  margin: 0 525px;
+}
+
+.update {
+  margin: 0 525px;
+}
+
+.add {
+  margin: 0 525px;
+}
+
+.edit {
+  margin: 0 420px;
+}
+
+.delete {
+  margin: 0 411px;
+}
+
+.btn {
+  margin-top: 15px;
+  padding: 6px 12px;
+  color: $white;
+  background-color: $black;
+  border: 2px;
+}
+
+#background {
+  top: 40px;
+  position: relative;
+  .video {
+    height: 90vh;
+    background-position: center;
+    background-size: cover;
+  }
+  h1 {
+    font-size: 40px;
+    position: absolute;
+    top: 20%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    color: $white;
+  }
+}
+
+#gallery {
+  .image {
+    background-position: center;
+    background-size: cover;
+    &:after {
+      content: "";
+      padding-bottom: 100%;
+      display: block;
+    }
+  }
+}
+
+#map {
+  height: 300px;
+  background-color: grey;
+}
+
+footer {
+  background-color: $black;
+  padding: 1px 0;
+  text-align: center;
+  color: $white;
+  margin-top: 30px;
+  p {
+  top: 5px;
+  }
+}
+
+@media only screen and (max-width: 575px) {
+
+  h1 {
+    font-size: 1.5rem;
+    margin-bottom: 1px;
+    text-align: center;
+  }
+
+  header {
+    height: auto;
+    position: fixed;
+    nav {
+      ul {
+        li {
+          display: block;
+          float: none;
+          text-align: right;
+          &:last-of-type {
+          }
+          &.menu {
+            display: block;
+          }
+          a {
+            color: $black;
+            &:after {
+            }
+            &:hover {
+            }
+          }
+        }
+        .dropdown {
+          display: none;
+        }
+      }
+    }
+  }
+
+  section {
+    text-align: center;
+    padding-top: 80px;
+    padding-bottom: 44px;
+  }
+
+  footer {
+    font-size: 10px;
+    width: 100%;
+    p {
+      width: 100%;
+    }
+  }
+
+  #gallery {
+    .image {
+      margin-bottom: 15px;
+    }
+  }
+
+  #background {
+    top: 40px;
+    position: relative;
+    .video {
+      // height: 86vh;
+      // background-position: center;
+      // background-size: cover;
+      // position: relative;
+      // height: 300px;
+      // width: 300px;
+      // overflow: hidden;
+    }
+    h1 {
+      position: absolute;
+      font-size: 25px;
+      top: 20%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      color: $white;
+    }
+  }
+
+  .clubs {
+    padding-top: 20px;
+  }
+
+  .registration {
+      padding-bottom: 17px;
+  }
+
+  .login {
+    padding-bottom: 157px;
+  }
+}

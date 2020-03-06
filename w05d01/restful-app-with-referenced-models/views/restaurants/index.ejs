@@ -1,0 +1,41 @@
+<section class="container">
+  <h1>Restaurants</h1>
+</section>
+<section class="container">
+  <div class="container">
+    <% if(locals.isAuthenticated) { %>
+    <a href="/restaurants/new" class="btn add">Add</a>
+    <% } %>
+    <% restaurants.forEach((restaurant) => { %>
+      <div class="line">
+        <a href="/restaurants/<%= restaurant.id %>">
+          <img src="<%= restaurant.image1 %>" alt="<%= restaurant.name %>">
+          <h2><%= restaurant.name %></h2>
+          <p>
+            <%= restaurant.phone %><br>
+            <%= restaurant.address.line1 %><br>
+            <% if(restaurant.address.line2) { %><%= restaurant.address.line2 %><br><% } %>
+            <% if(restaurant.address.line3) { %><%= restaurant.address.line3 %><br><% } %>
+            <%= restaurant.address.city %><br>
+            <%= restaurant.address.postcode %><br>
+            <%= restaurant.address.country %>
+          </p>
+          <p>
+            <% while(restaurant.stars--) { %> &star; <% } %>
+          </p>
+        </a>
+          <% if(locals.isAuthenticated) { %>
+            <a href="/restaurants/<%= restaurant.id %>/edit" class="btn edit">Edit</a>
+            <form action="/restaurants/<%= restaurant.id %>" method="POST">
+              <input type="hidden" name="_method" value="DELETE"/>
+              <button class="btn delete">Delete</button>
+            </form>
+        <% } %>
+        <p>
+          <strong>Created By:</strong>
+          <%= restaurant.createdBy.username %>
+        </p>
+      </div>
+    <% }) %>
+  </div>
+</section>

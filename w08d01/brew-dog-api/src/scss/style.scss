@@ -1,0 +1,179 @@
+// Import all of your scss files here
+@import 'partials/variables';
+@import 'partials/sliders';
+@import 'vendor/reset';
+
+html, button, input, select, textarea,
+.pure-g [class *= "pure-u"] {
+  font-family: 'Raleway', sans-serif;
+  color:$text-color;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+h2 {
+  letter-spacing: 1px;
+}
+
+ul {
+  list-style: none;
+  // padding: 0;
+  // margin: 0;
+}
+
+header {
+  overflow: hidden;
+  h1 {
+    color: $coral;
+    font-size: 26px;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    margin: 0;
+    float: left;
+    position: relative;
+    top: 2px;
+  }
+  input {
+    float: right;
+    border: 1px solid $coral;
+    padding: 6px 8px;
+    border-radius: 2px;
+    width: 250px;
+    &:focus {
+      outline: none !important;
+      border-width: 2px;
+      padding: 5px 7px;
+    }
+  }
+}
+
+nav {
+  .navbar-default {
+    .navbar-brand {
+      color: black;
+      font-weight: bold;
+    }
+  }
+  .navbar-collapse {
+    text-align: center;
+    float: right;
+    padding: 8px;
+  }
+  #search {
+    padding: 5px;
+  }
+}
+
+main.beersIndex {
+  text-align: center;
+}
+
+div {
+  div {
+    div {
+      h3 {
+        margin-top: 10px;
+        margin-bottom: 10px;
+        font-weight: 600;
+        text-transform: uppercase;
+        color: lightgreen;
+      }
+      ul {
+        li {
+          list-style: none;
+          border: 2px solid black;
+          margin: 5px;
+          border-radius: 25px;
+          padding: 5px;
+          &:last-of-type {
+            margin-bottom: 30px;
+          }
+        }
+      }
+      p.tips {
+        border-bottom: 1px solid dodgerblue;
+        border-top: 1px solid dodgerblue;
+        padding: 10px;
+        height: 80px;
+        margin-top: 10px;
+        margin-bottom: 10px;
+      }
+      h1 {
+        font-size: 25px;
+        font-weight: bold;
+        margin-top: 10px;
+        margin-bottom: 10px;
+        text-transform: uppercase;
+      }
+      .abv {
+        color: red;
+        font-weight: 600;
+      }
+      #image {
+        max-height: 300px;
+        margin-top: 40px;
+      }
+    }
+  }
+  .morebeers {
+    margin-bottom: 30px;
+    padding: 5px 50px;
+    color: white;
+    background-color: black;
+    border: 5px outset red;
+    text-transform: uppercase;
+  }
+}
+
+//------------------------------------------------------------------------------
+@media only screen and (max-width: 640px) {
+  header {
+    h1 {
+      text-align: center;
+      float: none;
+      margin-bottom: 15px;
+    }
+    input {
+      float: none;
+      width: 100%;
+    }
+  }
+
+  div {
+    div {
+      div {
+        h1 {
+          font-size: 20px;
+        }
+        ul {
+          li {
+            font-size: 13px;
+            &:last-of-type {
+              margin-bottom: 0;
+            }
+          }
+        }
+        p.tips {
+          padding: 10px;
+          height: 115px;
+        }
+      }
+    }
+    .morebeers {
+    margin-top: 20px;
+    }
+  }
+
+  nav {
+    .navbar-collapse {
+      float: center;
+    }
+    #search {
+      padding: 6px;
+      font-size: 20px;
+      text-align: center;
+    }
+  }
+}

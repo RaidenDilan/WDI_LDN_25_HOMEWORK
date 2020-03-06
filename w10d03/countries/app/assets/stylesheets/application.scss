@@ -1,0 +1,136 @@
+/*
+ * This is a manifest file that'll be compiled into application.css, which will include all the files
+ * listed below.
+ *
+ * Any CSS and SCSS file within this directory, lib/assets/stylesheets, vendor/assets/stylesheets,
+ * or any plugin's vendor/assets/stylesheets directory can be referenced here using a relative path.
+ *
+ * You're free to add application-wide styles to this file and they'll appear at the bottom of the
+ * compiled file so the styles you add here take precedence over styles defined in any other CSS/SCSS
+ * files in this directory. Styles in this file should be added after the last require_* statement.
+ * It is generally better to create a new file per style scope.
+ *
+ *= require_tree .
+ *= require_self
+ */
+body {
+  // background: rgb(151, 255, 70);
+  font-family: 'Raleway', sans-serif;
+  // background: rgba(61, 226, 107, 0.73);
+  form {
+    // background-color: rgb(226, 238, 245);
+    padding: 15px;
+    .actions {
+      text-align: center;
+    }
+  }
+  h1 {
+    text-align: center;
+    text-transform: uppercase;
+  }
+
+  h4 {
+    text-align: center;
+  }
+  p {
+    img {
+      max-width: 30%;
+      border: 1px solid black;
+      border-radius: 10px;
+    }
+  }
+  tr {
+    td {
+      &.continent {
+        margin: 0px 5px 0 5px;
+        &.btn-xs {
+          a {
+            color: white;
+          }
+        }
+      }
+      img {
+        max-width: 200px;
+        border: 1px solid black;
+      }
+      &.country {
+        margin: 63px 5px 0 5px;
+        color: white;
+        text-transform: uppercase;
+        &.btn-xs {
+          a {
+            color: white;
+          }
+        }
+      }
+      a:visited {
+        text-decoration: none;
+      }
+      a:hover {
+        color: black;
+        background-color: transparent;
+        text-decoration: none;
+      }
+    }
+  }
+  nav {
+    ul {
+      &.navbar {
+        background-color: black;
+        min-height: 42px;
+        padding: 6px;
+        text-align: center;
+        text-transform: uppercase;
+      }
+      &.nav-tabs > li > a {
+        border-radius: 4px;
+        color: white;
+        &:hover {
+          color: black;
+        }
+      }
+      &.nav > li > a:hover {
+        background-color: rgb(24, 205, 195);
+        opacity: 0.8;
+        transition: opacity .60s ease-in;
+        border-color: black;
+        color: white;
+      }
+      &.nav-tabs > li {
+        float: none;
+        display: inline-block;
+      }
+      li {
+        a {
+          text-align: center;
+        }
+      }
+    }
+  }
+  div {
+    &.newcountry {
+      text-align: center;
+      a {
+        color: white;
+        text-transform: uppercase;
+      }
+    }
+    label {
+      text-transform: uppercase;
+    }
+    .submit {
+      text-transform: uppercase;
+    }
+  }
+  table {
+    thead {
+      tr {
+        th {
+          color: black;
+          // padding-left: 10px;
+          text-transform: uppercase;
+        }
+      }
+    }
+  }
+}

@@ -1,0 +1,11 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Name:</strong>
+  <%= @continent.name %>
+</p>
+
+<div class="actions container">
+    <%= link_to 'Edit', edit_continent_path(@continent), class: 'btn btn-default btn-xs'%> <span class="glyphicon glyphicon-menu-left" aria-hidden="true"></span><span class="glyphicon glyphicon-flash" aria-hidden="true"></span><span class="glyphicon glyphicon-menu-right" aria-hidden="true"></span>
+    <%= link_to 'Back', continents_path, class: 'btn btn-default btn-xs'%>
+</div>

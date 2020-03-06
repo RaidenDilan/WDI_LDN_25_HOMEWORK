@@ -1,0 +1,49 @@
+<section>
+  <div class="content">
+    <!-- <h2>{{ studentsShow.student.name }}</h2> -->
+
+    <form name="main.studentForm" ng-submit="studentsEdit.update()" novalidate>
+      <div>
+        <label for="name">Name</label>
+        <input type="text" name="name" id="name" ng-model="studentsEdit.student.name" required>
+      </div>
+      <div class="ng-message-error" ng-messages="main.studentForm.name.$error" ng-show="(main.studentForm.$submitted || main.studentForm.name.$touched)">
+        <p ng-message="required">Name is required.</p>
+      </div>
+<!----------------------------------------------------------------------------->
+      <div>
+        <label for="linkedin">LinkedIn</label>
+        <input type="text" name="linkedin" id="linkedin" ng-model="studentsEdit.student.linkedIn" required>
+      </div>
+      <div class="ng-message-error" ng-messages="main.studentForm.linkedin.$error" ng-show="(main.studentForm.$submitted || main.studentForm.linkedin.$touched)">
+        <p ng-message="required">LinkedIn is required.</p>
+      </div>
+<!----------------------------------------------------------------------------->
+      <div>
+        <label for="github">GitHub</label>
+        <input type="text" name="github" id="github" ng-model="studentsEdit.student.gitHub" required>
+      </div>
+      <div class="ng-message-error" ng-messages="main.studentForm.github.$error" ng-show="(main.studentForm.$submitted || main.studentForm.github.$touched)">
+        <p ng-message="required">GitHub is required.</p>
+      </div>
+<!----------------------------------------------------------------------------->
+      <div>
+        <label for="mostlikelyto">Most Likely To</label>
+        <input type="text" name="mostlikelyto" id="mostlikelyto" ng-model="studentsEdit.student.mostLikelyTo" required>
+      </div>
+      <div class="ng-message-error" ng-messages="main.studentForm.mostlikelyto.$error" ng-show="(main.studentForm.$submitted || main.studentForm.mostlikelyto.$touched)">
+        <p ng-message="required">Must complete this section.</p>
+      </div>
+<!----------------------------------------------------------------------------->
+      <div>
+        <label for="image">Image</label>
+        <input type="text" name="image" id="image" ng-model="studentsEdit.student.image" required>
+      </div>
+      <div class="ng-message-error" ng-messages="main.studentForm.image.$error" ng-show="(main.studentForm.$submitted || main.studentForm.image.$touched)">
+        <p ng-message="required">Image is required.</p>
+      </div>
+<!----------------------------------------------------------------------------->
+      <button>Update</button>
+    </form>
+  </div>
+</section>

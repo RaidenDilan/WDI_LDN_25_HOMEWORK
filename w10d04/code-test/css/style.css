@@ -1,0 +1,88 @@
+body {
+  font-family: 'Raleway', sans-serif;
+}
+
+h1 {
+  text-align: center;
+}
+
+button {
+  text-align: center;
+  display: inline-block;
+  padding: 10px 20px;
+  background-color: black;
+  color: white;
+  outline: none;
+  margin-bottom: 20px;
+  font-size: 15px;
+}
+
+li {
+  list-style: none;
+  text-align: center;
+  border: 2px solid black;
+  border-radius: 20px;
+  margin-left: 160px;
+  margin-right: 160px;
+  display: block;
+}
+
+p {
+  text-align: center;
+  margin: 0;
+}
+
+ul {
+  padding: 0;
+}
+
+span {
+  font-weight: bold;
+  font-size: 25px;
+}
+.progress {
+  float: left;
+}
+.bold {
+  font-weight: bolder;
+}
+
+#donated {
+  font-weight: bold;
+  font-size: 20px;
+}
+
+.border {
+  border: 2px solid black;
+  border-radius: 20px;
+  margin-top: 300px;
+  margin-left: 250px;
+  margin-right: 250px;
+  margin-bottom: 300px;
+}
+
+.shade {
+  padding: 2px;
+  color: red;
+}
+
+.buttons {
+  text-align: center;
+}
+
+.goal {
+  margin-bottom: 10px;
+}
+
+.target {
+  border: 2px solid black;
+  padding: 6px;
+  margin: 5px 320px;
+  position: relative;
+  display: grid;
+  margin-bottom: 25px;
+}
+
+.amount {
+  font-weight: bold;
+}

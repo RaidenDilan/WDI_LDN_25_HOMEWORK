@@ -1,0 +1,11 @@
+<div class="container">
+  <hr>
+  <h1>Continents</h1>
+  <ul>
+    <li ng-repeat="continent in continentsIndex.all">
+      <a ui-sref="continentsShow({ id: continent.id })">
+        <p>{{ continent.name }}</p>
+      </a>
+    </li>
+</ul>
+</div>

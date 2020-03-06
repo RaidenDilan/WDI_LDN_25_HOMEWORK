@@ -1,0 +1,14 @@
+<section class="container">
+  <h1>Profile</h1>
+  <section>
+    <div>
+      <h1 class="username"><%= user.username %></h1>
+      <img src="<%= user.imageSRC %>" alt="<%= user.username %>">
+
+      <form method="POST" action="/profile">
+        <input type="hidden" name="_method" value="DELETE">
+        <button class="btn btn-outline-secondary">Delete Account</button>
+      </form>
+    </div>
+  </section>
+</section>

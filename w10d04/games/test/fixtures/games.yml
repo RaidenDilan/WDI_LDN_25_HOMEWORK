@@ -1,0 +1,23 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  title: MyString
+  photo: MyString
+  writer: MyString
+  platform: MyString
+  programmer: MyString
+  price: 1.5
+  release_date: 2017-04-07
+  developer: one
+  genre: one
+
+two:
+  title: MyString
+  photo: MyString
+  writer: MyString
+  platform: MyString
+  programmer: MyString
+  price: 1.5
+  release_date: 2017-04-07
+  developer: two
+  genre: two

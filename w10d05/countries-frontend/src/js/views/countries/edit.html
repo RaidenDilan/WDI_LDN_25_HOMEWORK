@@ -1,0 +1,30 @@
+<h1>Edit {{ countriesEdit.country.name }}</h1>
+<div class="container">
+  <form ng-submit="countriesEdit.update()" class="form-group">
+    <div>
+      <label>Name</label><br>
+      <input ng-model="countriesEdit.country.name" class="form-control">
+    </div>
+    <div>
+      <label>Image</label><br>
+      <input ng-model="countriesEdit.country.image" class="form-control">
+    </div>
+    <div>
+      <label>Size</label><br>
+      <input ng-model="countriesEdit.country.size" class="form-control">
+    </div>
+    <div>
+      <label>Population</label><br>
+      <input ng-model="countriesEdit.country.population" class="form-control">
+    </div>
+    <div>
+      <label>Language</label><br>
+      <input ng-model="countriesEdit.country.language" class="form-control">
+    </div>
+    <div>
+      <label>Currency</label><br>
+      <input ng-model="countriesEdit.country.currency" class="form-control">
+    </div>
+    <button>Update</button>
+  </form>
+</div>

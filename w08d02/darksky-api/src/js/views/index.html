@@ -1,0 +1,47 @@
+<h1>Dark Sky API</h1>
+<hr>
+<section>
+  <div>
+    <h2>Weather Forecast</h2>
+    <hr>
+    <!-- <p ng-repeat="weather in weatherIndex.weatherInfo">{{ main.weatherInfo.currently.temperature }}</p> -->
+    <p>Temperature: {{ main.weatherInfo.currently.temperature }}°F</p>
+    <p>Dew Point: {{ main.weatherInfo.currently.dewPoint }}</p>
+    <p>Humidity: {{ main.weatherInfo.currently.humidity }}</p>
+    <p>Condition: {{ main.weatherInfo.currently.summary }}</p>
+    <p>Visibility: {{ main.weatherInfo.currently.visibility }}</p>
+    <p>Cloud Cover: {{ main.weatherInfo.currently.cloudCover }}%</p>
+    <p>Pressure: {{ main.weatherInfo.currently.pressure }}</p>
+    <p>Ozone: {{ main.weatherInfo.currently.ozone }} Dobson</p>
+    <p>Wind Speed: {{ main.weatherInfo.currently.windSpeed }} Miles p/h</p>
+    <p>Wind Bearing: {{ main.weatherInfo.currently.windBearing }}</p>
+    <p>Percipitation Probability: {{ main.weatherInfo.currently.precipProbability }}</p>
+    <!-- <p>Sunset: {{ main.weatherInfo.currently.sunsetTime }}</p> -->
+  </div>
+</section>
+
+<hr>
+
+<section>
+  <div>
+    <h2>Daily Forecast</h2>
+    <hr>
+    <!-- <ul ng-repeat="weather in weatherIndex.weatherInfo"> -->
+    <ul>
+      <li>{{ main.weatherInfo.daily.data }}</li>
+    </ul>
+  </div>
+</section>
+
+<!-- <div class="map" ng-map="NgMap.getMap()">
+</div> -->
+
+<section>
+  <div>
+    <ng-map center="[57.454,-43.434]" zoom="2">
+      <marker position=“[57.454,-43.434]”></marker>
+    </ng-map>
+  </div>
+</section>
+
+<!-- <map center="[57.454,-43.434]" zoom="18"><marker position=“[57.454,-43.434]”></marker></map> -->

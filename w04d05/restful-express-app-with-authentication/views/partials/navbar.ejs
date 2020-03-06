@@ -1,0 +1,17 @@
+<header>
+  <nav class="container">
+    <ul>
+      <li class="menu">&#9776;</li>
+      <div class="dropdown">
+        <% if(locals.isLoggedIn) { %>
+        <li><a href="/logout">Logout</a></li>
+        <% } else { %>
+        <li><a href="/login">Login</a></li>
+        <li><a href="/register">Register</a></li>
+        <% } %>
+        <li><a href="/clubs">Clubs</a></li>
+        <li><a href="/">REAA</a></li>
+      </div>
+    </ul>
+  </nav>
+</header>

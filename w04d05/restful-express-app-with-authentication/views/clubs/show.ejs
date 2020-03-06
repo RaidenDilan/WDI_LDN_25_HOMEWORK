@@ -1,0 +1,38 @@
+<section>
+  <h1><%= club.name %></h1>
+  <div class="container">
+    <section id="gallery">
+      <h2>Gallery</h2>
+      <div class="row">
+        <div class="col-sm-4">
+          <div class="image" style="background-image: url(<%= club.image1 %>)"></div>
+        </div>
+        <div class="col-sm-4">
+          <div class="image" style="background-image: url(<%= club.image2 %>)"></div>
+        </div>
+        <div class="col-sm-4">
+          <div class="image" style="background-image: url(<%= club.image3 %>)"></div>
+        </div>
+      </div>
+    </section>
+    <section id="about">
+      <div class="row">
+        <div class="col-sm-10 offset-sm-1">
+          <h2>About</h2>
+          <p><%= club.phone %></p>
+          <p><a href="http://<%= club.website %>"><%= club.website %></a></p>
+          <p><%= club.address %></p>
+          <p><%= club.description %></p>
+        </div>
+      </div>
+    </section>
+    <section id="location">
+      <div class="row">
+        <div class="col-sm-10 offset-sm-1">
+          <h2>Location</h2>
+          <div id="map" data-lat=<%= club.lat %> data-lng=<%= club.lng %>></div>
+        </div>
+      </div>
+    </section>
+</div>
+</section>

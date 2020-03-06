@@ -1,0 +1,36 @@
+<section>
+  <div class="content">
+    <form ng-submit="birdsEdit.update()" name="bird.birdeditForm" novalidate class="forms">
+      <div>
+        <label for="name">Name</label>
+        <input type="text" name="name" id="name" ng-model="birdsEdit.bird.name" required>
+      </div>
+      <div ng-messages="bird.birdeditForm.name.$error" role="alert" ng-show="(bird.birdeditForm.name.$touched || bird.birdeditForm.$submitted)" class="error">
+        <div ng-message="required">Your bird's name is required</div>
+      </div>
+      <div>
+        <label for="latinName">Latin Name</label>
+        <input type="text" name="latinName" id="latinName" ng-model="birdsEdit.bird.latinName" required>
+      </div>
+      <div ng-messages="bird.birdeditForm.latinName.$error" role="alert" ng-show="(bird.birdeditForm.latinName.$touched || bird.birdeditForm.$submitted)" class="error">
+        <div ng-message="required">Your bird's latin name is required</div>
+      </div>
+      <div>
+        <label for="family">Family</label>
+        <input type="text" name="family" id="family" ng-model="birdsEdit.bird.family" required>
+      </div>
+      <div ng-messages="bird.birdeditForm.family.$error" role="alert" ng-show="(bird.birdeditForm.family.$touched || bird.birdeditForm.$submitted)" class="error">
+        <div ng-message="required">Your bird's family name is required</div>
+      </div>
+      <div>
+        <label for="image">Image</label>
+        <input type="text" name="image" id="image" ng-model="birdsEdit.bird.image" required>
+      </div>
+      <div ng-messages="bird.birdeditForm.image.$error" role="alert" ng-show="(bird.birdeditForm.image.$touched || bird.birdeditForm.$submitted)" class="error">
+        <div ng-message="required">Your bird's image is required</div>
+      </div>
+
+      <button>Update</button>
+    </form>
+  </div>
+</section>

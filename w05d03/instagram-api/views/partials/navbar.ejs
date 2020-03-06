@@ -1,0 +1,19 @@
+<header>
+  <nav class="container">
+    <ul>
+      <li class="menu">&#9776;</li>
+      <div class="dropdown">
+        <% if(locals.isAuthenticated) { %>
+        <li><a href="/profile">Profile</a></li>
+        <li><a href="/logout">Logout</a></li>
+        <li><a href="/feed">Feed</a></li>
+        <li><a href="/users">Users</a></li>
+        <% } else { %>
+        <li><a href="/login">Login</a></li>
+        <li><a href="/register">Register</a></li>
+        <% } %>
+        <li><a href="/">INSTAGRAM</a></li>
+      </div>
+    </ul>
+  </nav>
+</header>

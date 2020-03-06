@@ -1,0 +1,149 @@
+* {
+  box-sizing: border-box;
+}
+
+body {
+  font-family: sans-serif;
+  background-color: black;
+  text-align: center;
+  font-weight: bold;
+  font-size: 20px;
+}
+
+main {
+  margin: 100px 100px;
+  width: 800px;
+  padding: 10px;
+  /*border: 2px solid #333;*/
+  /*background-color: white;*/
+}
+
+img {
+  height: 200px;
+  width: 200px;
+  margin: 20px auto;
+}
+
+section {
+  margin: 20px auto;
+  width: 700px;
+}
+
+h1 {
+  color: white;
+  text-align: center;
+}
+
+div {
+  display: inline-block;
+  background-image:
+  background-position: cover;
+  font-family: sans-serif;
+}
+
+button {
+  padding: 40px;
+  display: inline-block;
+  border: 1px solid grey;
+  background-color: black;
+  margin: 3px;
+  width: 140px;
+  height: 140px;
+  font-size: 0.8em;;
+}
+
+#first {
+  border: 1px solid grey;
+  color: orange;
+  background-color: black;
+}
+
+#first {
+  border: 1px solid grey;
+  color: orange;
+  background-color: black;
+}
+
+#first {
+  border: 1px solid grey;
+  color: orange;
+  background-color: black;
+}
+
+#first {
+  border: 1px solid grey;
+  color: orange;
+  background-color: black;
+}
+
+#second {
+  border: 1px solid grey;
+  background-color: black;
+  color: gold;
+}
+
+#second {
+  border: 1px solid grey;
+  background-color: black;
+  color: gold;
+}
+
+#second {
+  border: 1px solid grey;
+  background-color: black;
+  color: gold;
+}
+
+#second {
+  border: 1px solid grey;
+  background-color: black;
+  color: gold;
+}
+
+#third {
+  border: 1px solid grey;
+  background-color: black;
+  color: lightyellow;
+}
+
+#third {
+  border: 1px solid grey;
+  background-color: black;
+  color: lightyellow;
+}
+
+#third {
+  border: 1px solid grey;
+  background-color: black;
+  color: lightyellow;
+}
+
+#third {
+  border: 1px solid grey;
+  background-color: black;
+  color: lightyellow;
+}
+
+#fourth {
+  border: 1px solid grey;
+  background-color: black;
+  color: red;
+}
+
+#fourth {
+  border: 1px solid grey;
+  background-color: black;
+  color: red;
+}
+
+#fourth {
+  border: 1px solid grey;
+  background-color: black;
+  color: red;
+}
+
+#fourth {
+  border: 1px solid grey;
+  background-color: black;
+  color: red;
+}

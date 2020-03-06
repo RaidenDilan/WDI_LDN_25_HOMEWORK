@@ -1,0 +1,11 @@
+<section>
+  <ul class="forms">
+    <h1>Bird Collection</h1>
+    <li ng-repeat="bird in birdsIndex.all">
+      <img ng-src="{{ bird.image }}">
+
+      <a ui-sref="birdsShow({ id: bird.id })"><h2>{{ bird.name }}</h2></a>
+      <p><strong>{{ bird.latinName }}</strong> <em>{{ bird.family }}</em></p>
+    </li>
+  </ul>
+</section>

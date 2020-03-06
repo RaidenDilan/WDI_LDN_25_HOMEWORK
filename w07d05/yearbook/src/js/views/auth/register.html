@@ -1,0 +1,40 @@
+<section>
+  <div class="content">
+    <h2>Register</h2>
+    <form name="main.studentForm" ng-submit="register.submit()" novalidate>
+      <div>
+        <label for="username">Username</label>
+        <input type="text" name="username" id="username" ng-model="register.user.username" required>
+      </div>
+      <div class="ng-message-error" ng-messages="main.studentForm.username.$error" ng-show="(main.studentForm.$submitted || main.studentForm.username.$touched)">
+        <p ng-message="required">Your username is required.</p>
+      </div>
+<!----------------------------------------------------------------------------->
+      <div>
+        <label for="email">Email</label>
+        <input type="text" name="email" id="email" ng-model="register.user.email" required>
+      </div>
+      <div class="ng-message-error" ng-messages="main.studentForm.email.$error" ng-show="(main.studentForm.$submitted || main.studentForm.email.$touched)">
+        <p ng-message="required">Your email is required.</p>
+      </div>
+<!----------------------------------------------------------------------------->
+      <div>
+        <label for="password">Password</label>
+        <input type="password" name="password" id="password" ng-model="register.user.password" required>
+      </div>
+      <div class="ng-message-error" ng-messages="main.studentForm.password.$error" ng-show="(main.studentForm.$submitted || main.studentForm.password.$touched)">
+        <p ng-message="required">Your password is required.</p>
+      </div>
+<!----------------------------------------------------------------------------->
+      <div>
+        <label for="passwordConfirmation">Password Confirmation</label>
+        <input type="password" name="passwordConfirmation" id="passwordConfirmation" ng-model="register.user.passwordConfirmation" required>
+      </div>
+      <div class="ng-message-error" ng-messages="main.studentForm.passwordConfirmation.$error" ng-show="(main.studentForm.$submitted || main.studentForm.passwordConfirmation.$touched)">
+        <p ng-message="required">Your password confirmation is required.</p>
+      </div>
+<!----------------------------------------------------------------------------->
+      <button>Register</button>
+    </form>
+  </div>
+</section>

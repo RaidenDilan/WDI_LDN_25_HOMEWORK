@@ -1,0 +1,16 @@
+<div class="card">
+  <div class="card-block">
+    <div class="row">
+        <% records.forEach((record) => { %>
+          <div class="col-md-6">
+            <img class="img-fluid" src="<%= record.image %>" alt="<%= record.model %>">
+            <h4><%= record.breed %></h4>
+            <h6><%= record.origin %></h6>
+            <h6><%= record.colors %></h6>
+            <h6><%= record.maleHeight %></h6>
+            <h6><%= record.femaleHieght %></h6>
+          </div>
+        <% }) %>
+    </div>
+  </div>
+</div>

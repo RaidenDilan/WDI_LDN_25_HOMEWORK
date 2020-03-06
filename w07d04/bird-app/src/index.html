@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html ng-app="birdApp">
+<head>
+  <base href="/">
+  <title>Bird App</title>
+  <!-- inject:js -->
+  <!-- endinject -->
+  <!-- inject:css -->
+  <!-- endinject -->
+</head>
+<body ng-controller="BirdsIndexCtrl as bird" ng-class="bird.pageName">
+  <div class="menu" ng-click="bird.menuIsOpen = !bird.menuIsOpen" ng-class="{ 'open': bird.menuIsOpen }">
+    <div class="burger">
+      <span></span>
+      <span></span>
+      <span></span>
+      <span></span>
+    </div>
+  </div>
+  <nav ng-class="{ 'open': bird.menuIsOpen }">
+    <div class="left">
+      <h1>Raiden Dilan</h1>
+    </div>
+    <div class="right">
+      <div class="links">
+        <ul>
+          <li><a ui-sref-active="active" ui-sref="home">Home</a></li>
+          <li><a ui-sref-active="active" ui-sref="birdsNew">New Bird</a></li>
+          <li><a ui-sref-active="active" ui-sref="birdsIndex">All Birds</a></li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+  <main ui-view></main>
+</body>
+</html>

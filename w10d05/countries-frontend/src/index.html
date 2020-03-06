@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html ng-app="countries">
+  <head>
+    <base href="/">
+    <meta charset="utf-8">
+    <link href="https://fonts.googleapis.com/css?family=Raleway" rel="stylesheet">
+    <title>Angular Stack Setup</title>
+    <!-- inject:js -->
+    <!-- endinject -->
+    <!-- inject:css -->
+    <!-- endinject -->
+  </head>
+  <body class="site">
+    <header>
+      <nav class="container">
+        <ul>
+          <li><a ui-sref="home">Home </a><strong class="hot">|</strong></li>
+          <li><a ui-sref="countriesIndex">Countries </a><strong class="hot">|</strong></li>
+          <li><a ui-sref="countriesNew">New Country </a><strong class="hot">|</strong></li>
+          <li><a ui-sref="continentsIndex">Continents </a><strong class="hot">|</strong></li>
+          <li><a ui-sref="continentsNew">New Continent </a><strong class="hot">|</strong></li>
+        </ul>
+      </nav>
+    </header>
+    <main ui-view class="site-content">
+    </main>
+    <footer>Made with <span>&hearts;</span> By Raiden Dilan @ <span>GA</span></footer>
+  </body>
+</html>

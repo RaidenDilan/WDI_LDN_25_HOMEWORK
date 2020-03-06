@@ -1,0 +1,39 @@
+<section class="container">
+    <h1 class="username"><%= user.username %></h1>
+    <img src="<%= user.imageSRC %>" alt="<%= user.username %>">
+    <button href="http://localhost:3000/edit" type="button" class="btn btn-outline-secondary editprofile">Edit Profile</button>
+    <div>
+      <a href="http://localhost:3000/logout" class="btn btn-outline-secondary">ooo</a>
+    </div>
+</section>
+
+<section class="container">
+  <form method="POST" action="/register" enctype="multipart/form-data">
+    <div>
+      <label for="image">Images</label>
+      <input type="file" name="image" id="image">
+      <textarea name="Caption" rows="1" cols="10" placeholder="Caption"></textarea>
+      <button class="btn btn-outline-secondary">Upload</button>
+    </div>
+  </form>
+</section>
+
+<section id="gallery" class="container">
+    <div class="row">
+      <div class="col-sm-4">
+        <div class="image" style="background-image: url(<%= user.image %>)"></div>
+        <%# // user.image is just for me to see wha is there on the page%>
+        <%# <button href="http://" type="button" class="btn btn-outline-secondary editprofile">Edit Image</button>%>
+      </div>
+      <div class="col-sm-4">
+        <div class="image" style="background-image: url(<%= user.image %>)"></div>
+        <%# // user.image is not%>
+        <%# <button href="http://" type="button" class="btn btn-outline-secondary editprofile">Edit Image</button>%>
+      </div>
+      <div class="col-sm-4">
+        <div class="image" style="background-image: url(<%= user.image %>)"></div>
+        <%# // user.image is not%>
+        <%# <button href="http://" type="button" class="btn btn-outline-secondary editprofile">Edit Image</button>%>
+      </div>
+    </div>
+</section>

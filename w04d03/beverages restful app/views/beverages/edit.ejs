@@ -1,0 +1,30 @@
+<h1>Edit</h1>
+  <form method="POST" action="/beverages/<%= beverage.id %>">
+    <input type="hidden" name="_method" value="PUT">
+    <div>
+      <label for="name">Name</label>
+      <input type="text" name="name" id="name" value="<%= beverage.name %>">
+    </div>
+
+    <div>
+      <label for="type">Type</label>
+      <input type="text" name="type" id="type" value="<%= beverage.type %>">
+    </div>
+
+    <div>
+      <label for="abv">abv</label>
+      <input type="text" name="abv" id="abv" value="<%= beverage.abv %>">
+    </div>
+
+    <div>
+      <label for="origin">Origin</label>
+      <input type="text" name="origin" id="origin" value="<%= beverage.origin %>">
+    </div>
+
+    <div>
+      <label for="image">Image</label>
+      <input type="text" name="image" id="image" value="<%= beverage.image %>">
+    </div>
+
+    <button>Edit Beverage</button>
+  </form>

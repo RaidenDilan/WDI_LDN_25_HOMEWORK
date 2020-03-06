@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html ng-app="yearbookApp">
+<head>
+  <base href="/">
+  <title>Yearbook App</title>
+  <!-- inject:js -->
+  <!-- endinject -->
+  <!-- inject:css -->
+  <!-- endinject -->
+</head>
+<body ng-controller="StudentsIndexCtrl as student" ng-class="student.pageName">
+<!----------------------------------------------------------------------------->
+  <div class="menu" ng-click="student.menuIsOpen = !student.menuIsOpen" ng-class="{ 'open': student.menuIsOpen }">
+    <div class="burger">
+      <span></span>
+      <span></span>
+      <span></span>
+      <span></span>
+    </div>
+  </div>
+<!----------------------------------------------------------------------------->
+  <nav ng-class="{ 'open': student.menuIsOpen }" ng-controller="MainCtrl as main">
+    <div class="left">
+      <h1>Raiden Dilan</h1>
+    </div>
+    <div class="right">
+      <div class="links">
+        <ul>
+          <li><a ui-sref-active="active" ui-sref="home">Home</a></li>
+          <li><a ui-sref-active="active" ui-sref="studentsIndex">Students</a></li>
+          <li ng-if="main.isAuthenticated()"><a ui-sref-active="active" ui-sref="studentsNew">New Student</a></li>
+          <li ng-if="main.isAuthenticated()"><a ng-click="main.logout()" href="#">Logout</a></li>
+          <ul>
+            <li ng-if="!main.isAuthenticated()"><a ui-sref-active="active" ui-sref="login">Login</a></li>
+            <li ng-if="!main.isAuthenticated()"><a ui-sref-active="active" ui-sref="register">Register</a></li>
+          </ul>
+        </ul>
+      </div>
+    </div>
+  </nav>
+<!----------------------------------------------------------------------------->
+  <main ui-view></main>
+  <!-- <footer>
+    <p>Made with <span class="heart">♥︎</span> by Raiden Dilan &#8853; General Assembly</p>
+  </footer> -->
+</body>
+</html>

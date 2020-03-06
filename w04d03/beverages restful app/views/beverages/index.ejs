@@ -1,0 +1,21 @@
+<h1>Index</h1>
+<div class="row">
+  <ul>
+    <% beverages.forEach((beverage) => { %>
+      <li class="six columns beverage">
+        <img class="thumbnail" src="<%= beverage.image %>" alt="<%= beverage.name %>">
+        <a href="/beverages/<%= beverage.id %>"><h2><%= beverage.name %></h2></a>
+        <h2><%= beverage.name %></h2>
+        <h4><%= beverage.type %></h4>
+        <p><%= beverage.abv %></p>
+        <p><%= beverage.origin %></p>
+        <img src="<%= beverage.image %>" alt="<%= beverage.name %>">
+        <a href="/beverages/<%= beverage.id %>/edit" class="button">Edit</a>
+        <form action="/beverages/<%= beverage.id %>" method="POST">
+          <input type="hidden" name="_method" value="DELETE">
+          <button>Delete</button>
+        </form>
+      </li>
+    <% }); %>
+  </ul>
+</div>

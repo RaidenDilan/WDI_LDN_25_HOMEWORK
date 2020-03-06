@@ -1,0 +1,23 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  name: MyString
+  image: MyString
+  size: 1
+  population: 1
+  language: MyString
+  currency: MyString
+  created_at: 2017-04-08 22:40:46
+  updated_at: 2017-04-08 22:40:46
+  continent: one
+
+two:
+  name: MyString
+  image: MyString
+  size: 1
+  population: 1
+  language: MyString
+  currency: MyString
+  created_at: 2017-04-08 22:40:46
+  updated_at: 2017-04-08 22:40:46
+  continent: two

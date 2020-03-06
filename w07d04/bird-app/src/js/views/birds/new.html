@@ -1,0 +1,44 @@
+<section>
+  <div class="content">
+    <h1>New Bird</h1>
+
+    <form ng-submit="birdsNew.create()" name="bird.birdnewForm" novalidate class="forms">
+      <div>
+        <label for="name">Name</label>
+        <input type="text" name="name" id="name" ng-model="birdsNew.bird.name" required>
+      </div>
+
+      <div ng-messages="bird.birdnewForm.name.$error" role="alert" ng-show="(bird.birdnewForm.name.$touched || bird.birdnewForm.$submitted)" class="error">
+        <div ng-message="required">Your bird's name is required</div>
+      </div>
+
+      <div>
+        <label for="latinName">Latin Name</label>
+        <input type="text" name="latinName" id="latinName" ng-model="birdsNew.bird.latinName" required>
+      </div>
+      <div ng-messages="bird.birdnewForm.latinName.$error" role="alert" ng-show="(bird.birdnewForm.latinName.$touched || bird.birdnewForm.$submitted)" class="error">
+        <div ng-message="required">Your bird's latin name is required</div>
+      </div>
+
+      <div>
+        <label for="family">Family</label>
+        <input type="text" name="family" id="family" ng-model="birdsNew.bird.family" required>
+      </div>
+
+      <div ng-messages="bird.birdnewForm.family.$error" role="alert" ng-show="(bird.birdnewForm.family.$touched || bird.birdnewForm.$submitted)" class="error">
+        <div ng-message="required">Your bird's family name is required</div>
+      </div>
+
+      <div>
+        <label for="image">Image</label>
+        <input type="text" name="image" id="image" ng-model="birdsNew.bird.image" required>
+      </div>
+
+      <div ng-messages="bird.birdnewForm.image.$error" role="alert" ng-show="(bird.birdnewForm.image.$touched || bird.birdnewForm.$submitted)" class="error">
+        <div ng-message="required">Your bird's image is required</div>
+      </div>
+
+      <button>Create</button>
+    </form>
+  </div>
+</section>

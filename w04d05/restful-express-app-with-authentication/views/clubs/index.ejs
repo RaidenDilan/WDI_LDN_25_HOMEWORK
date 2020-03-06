@@ -1,0 +1,28 @@
+<section class="container">
+  <h1>Clubs</h1>
+</section>
+<section class="container clubs">
+  <div>
+    <% if(locals.isLoggedIn) { %>
+    <a href="/clubs/new" class="btn add">Add</a>
+    <% } %>
+        <% clubs.forEach((club) => { %>
+          <div class="">
+            <div class="row">
+              <div class="col-sm-10 offset-sm-1">
+                <a href="/clubs/<%= club.id %>"><h2><%= club.name %></h2></a>
+                  <% if(locals.isLoggedIn) { %>
+                      <a href="/clubs/<%= club.id %>/edit" class="btn edit">Edit</a>
+                      <form action="/clubs/<%= club.id %>" method="POST">
+                        <input type="hidden" name="_method" value="DELETE"/>
+                        <button class="btn delete">Delete</button>
+                      </form>
+                  <% } %>
+              </div>
+            </div>
+          </div>
+        <% }); %>
+  </div>
+</section>
+<section>
+</section>

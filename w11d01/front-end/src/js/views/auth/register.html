@@ -1,0 +1,24 @@
+<h1>Register</h1>
+<hr>
+<div>
+  <form ng-submit="register.register()">
+    <div>
+      <label>Username</label><br>
+      <input type="text" ng-model="register.user.username">
+    </div>
+    <div>
+      <label>Email</label><br>
+      <input type="text" ng-model="register.user.email">
+    </div>
+    <div>
+      <label>Password</label><br>
+      <input type="password" ng-model="register.user.password">
+    </div>
+    <div>
+      <label>Password Confirmation</label><br>
+      <input type="password" ng-model="register.user.password_confirmation">
+    </div>
+    <hr>
+    <button>Register</button>
+  </form>
+</div>

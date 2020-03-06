@@ -1,0 +1,13 @@
+<section ng-controller="MainCtrl as main">
+  <div class="content">
+    <h2>{{ studentsShow.student.name }}</h2>
+    <img ng-src="{{ studentsShow.student.image }}">
+<!----------------------------------------------------------------------------->
+    <p><a href="{{ studentsShow.student.linkedIn }}" target="_blank">LinkedIn Profile</a></p>
+    <p><a href="{{ studentsShow.student.gitHub }}" target="_blank">GitHub Profile</a></p>
+    <p>Most Likely To: <em>{{ studentsShow.student.mostLikelyTo }}</em></p>
+<!----------------------------------------------------------------------------->
+    <a ng-if="main.isAuthenticated()" ui-sref="studentsEdit({ id: studentsShow.student.id })"><button>Edit</button></a>
+    <button ng-if="main.isAuthenticated()" ng-click="studentsShow.delete()">Delete</button>
+  </div>
+</section>
