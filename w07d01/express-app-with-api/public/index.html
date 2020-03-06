@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html ng-app="propertyApp">
+  <head>
+    <meta charset="utf-8">
+    <title>Express App with API</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.6/css/bootstrap.min.css" integrity="sha384-rwoIResjU2yc3z8GV/NPeZWAv56rSmLldC3R/AZzGRnGxQQKnKkoFVhFQhNUwEyJ" crossorigin="anonymous">
+    <script src="https://code.jquery.com/jquery-3.1.1.slim.min.js" integrity="sha384-A7FZj7v+d/sdmMqp/nOQwliLvUsJfDHW+k9Omg/a/EheAdgtzNs3hpfag6Ed950n" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/tether/1.4.0/js/tether.min.js" integrity="sha384-DztdAPBWPRXSA/3eYEEUWrWCy7G5KFbe8fFjk5JAIxUYHKkDx6Qin1DkWx51bBrb" crossorigin="anonymous"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.6/js/bootstrap.min.js" integrity="sha384-vBWWzlZJ8ea9aCX4pEW3rVHjgjt7zpkNpZk+02D9phzyeVkE+jo0ieGizqPLForn" crossorigin="anonymous"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.5.7/angular.min.js"></script>
+    <script src="js/app.js" charset="utf-8"></script>
+  </head>
+  <body ng-controller="PropertiesCtrl as properties">
+
+    <h1>Properties for You!</h1>
+    <hr>
+    <h5>There are {{ properties.all.length }} Properties</h5>
+    <!-- <hr> -->
+
+    <section ng-submit="properties.propertiesCreate()" class="container">
+      <div class="container">
+        <h3>Add Property</h3>
+        <form>
+          <input type="text" name='name' placeholder="Name" ng-model="properties.newProperty.name" class="form-control">
+          <input type="text" name='address' placeholder="Address" ng-model="properties.newProperty.address" class="form-control">
+          <input type="text" name='postcode' placeholder="Post Code" ng-model="properties.newProperty.postcode" class="form-control">
+          <input type="text" name='bedrooms' placeholder="Bedrooms" ng-model="properties.newProperty.bedrooms" class="form-control">
+          <input type="text" name='askingPrice' placeholder="Asking Price" ng-model="properties.newProperty.askingPrice" class="form-control">
+          <input type="text" name='floorArea' placeholder="Floor Area" ng-model="properties.newProperty.floorArea" class="form-control">
+          <input type="date" name='dateAvailable' placeholder="Date Available" ng-model="properties.newProperty.dateAvailable" class="form-control">
+          <label for="image"></label>
+          <input type="text" name="image" placeholder="Image"ng-model="properties.newProperty.image" class="form-control">
+          <input type="submit" value='Save Property' class="buttons">
+        </form>
+      </div>
+    </section>
+
+    <!-- <hr> -->
+
+    <section ng-repeat="property in properties.all" class="container">
+      <div class="container">
+        <div>
+          <img src="{{ property.image }}" alt="propertyimage" class="image"><br>
+          <div class="description">
+            <strong>Name: </strong>{{ property.name }}<br>
+            <strong>Address: </strong>{{ property.address }},
+            {{ property.postcode }}.<br>
+            <strong>Bedrooms: </strong>{{ property.bedrooms }} Bedrooms<br>
+            <strong>Asking Price: </strong>£{{ property.askingPrice }}<br>
+            <strong>Floor Area: </strong>{{ property.floorArea }} sq ft<br>
+            <strong>Date Available: </strong>{{ property.dateAvailable | date: 'dd/mm/yyyy' }}<br>
+          </div>
+          <button ng-click="properties.propertiesDelete(property)" class="delete">Delete</button>
+          <!-- <hr> -->
+        </div>
+      </div>
+    </section>
+    <!-- <hr> -->
+    <footer>
+      <p>Raiden Dilan &copy; General Assembly 2017</p>
+    </footer>
+  </body>
+</html>

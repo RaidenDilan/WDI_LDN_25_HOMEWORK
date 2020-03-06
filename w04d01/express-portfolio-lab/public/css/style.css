@@ -1,0 +1,26 @@
+body {
+  /*background: dodgerblue;*/
+}
+
+a {
+  text-decoration: none;
+}
+
+.photo {
+  max-width: 100%;
+  max-height: 100%;
+}
+
+.sonic {
+  max-width: 100%;
+  max-height: 100%;
+}
+
+.card-img-top {
+  max-width: 100%;
+}
+
+.project {
+  width: 450px;
+  height: 300px;
+}

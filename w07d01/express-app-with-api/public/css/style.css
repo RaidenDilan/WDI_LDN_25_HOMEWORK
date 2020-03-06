@@ -1,0 +1,109 @@
+* {
+  font-family: inherit;
+}
+
+body {
+  font-family: "Raleway", "HelveticaNeue", "Helvetica Neue", Helvetica, Arial, sans-serif;
+}
+
+header {
+  top: 40px;
+  left: 0;
+  right: 0;
+  z-index: 2;
+  height: 0;
+}
+
+h1 {
+  padding-top: 40px;
+  text-align: center;
+  font-size: 30px;
+  color: blue;
+}
+
+h5 {
+  /*font-size: 20px;*/
+  text-align: center;
+}
+
+ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  padding-top: 20px;
+  text-align: center;
+}
+
+li {
+  font-size: 20px;
+  display: inline-block;
+  margin-left: 20px;
+  line-height: 40px;
+  text-decoration: none;
+}
+
+a {
+  color: black;
+  font-weight: 600;
+  position: relative;
+  text-decoration: none;
+}
+
+section {
+  border-top: 4px solid #FF5900;
+  padding-top: 40px;
+  padding-bottom: 40px;
+  text-align: center;
+  position: relative;
+}
+
+form input[type=text], form input[type=date] {
+  margin-top: 10px;
+  /*text-align: center;*/
+}
+
+img {
+  max-width: 50%;
+  padding-bottom: 20px;
+}
+
+strong {
+  color: #FF006C;
+}
+
+footer {
+  background-color: black;
+  color: white;
+  text-align: center;
+  padding: 10px;
+}
+
+.image {
+  border: 5px solid black;
+  padding: 10px;
+  margin: 5px;
+}
+
+.buttons {
+  margin-top: 20px;
+  padding: 5px 20px;
+  background-color: #86D1AF;
+  color: white;
+  outline: none;
+}
+
+.delete {
+  margin-top: 20px;
+  padding: 5px 20px;
+  background-color: #86D1AF;
+  color: black;
+  outline: none;
+}
+
+.description {
+  background-color: black;
+  border: 5px solid black;
+  padding: 10px;
+  margin: 0 270px;
+  color: white;
+}
